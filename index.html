@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Interface</title>    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="Menu_Bar">
+        <div>
+            <a class="Menu_Logo" href="http://www.eventinterface.in/"><img src="logo_w.png" alt="Image description"></a>
+        </div>
+        <div>
+            <a class="Brand_Name" href="http://www.eventinterface.in/">Event Interface .in</a>
+        </div>
+        <div class="Menu">
+        <div class="search_bar">
+            <form action="" method="post">
+            <input type="text" placeholder="Type here to search ">
+            <button> <a href="">                
+                <svg 
+                width="30" 
+                height="30" 
+                class="search_icon" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Search Icon</title>
+                <path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" 
+                stroke="#717478" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"></path>
+                <path d="M16 16L21 21" 
+                stroke="#717478" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"></path>
+                </svg>
+                </a></button>
+            </form>
+        </div>
+        
+            <div class="Menu_Item" onclick="toggleForm('home_tab_id')">Home</div>
+            <div class="Menu_Item" onclick="toggleForm('event_tab_id')">Events</div>
+            <div class="Menu_Item" onclick="toggleForm('about_tab_id')">About</div>
+            <div class="Menu_Item" onclick="toggleForm('sign_up_tab')">Sign Up</div>
+            <div class="Menu_Item" onclick="toggleForm('log_in_tab' )">Log In</div>
+            <div class="Menu_Icon" id="menuIcon"onclick="toggleForm('Menu_Tab_id')">
+                <svg
+                width="30" 
+                height="30" 
+                class="search_icon" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Search Icon</title>
+                <path d="M3 12h18M3 6h18M3 18h18"
+                stroke="#ffffff" 
+                stroke-width="3" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"></path>
+                </svg>
+            </div>
+        </div>
+        
+        
+    </header>
+
+    <div class="Menu_Tab" id="Menu_Tab_id">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <div class="display_column">
+            <div class="home_tab_column">
+                <a class="tab_item" onclick="toggleForm('home_tab_id')">Home</a>
+                <a class="tab_item" onclick="toggleForm('event_tab_id')">Events</a>
+                <a class="tab_item" onclick="toggleForm('about_tab_id')">About</a>
+                <a class="tab_item" onclick="toggleForm('sign_up_tab')">Sign Up</a>
+                <a class="tab_item" onclick="toggleForm('log_in_tab' )">Log In</a>
+            </div>
+        </div>    
+    </div>
+    <div class="home_tab" id="home_tab_id">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <div class="display_column">
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Business</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Finance</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Health</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Education</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Science</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">R&D</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Products</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Legal Farm</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">House Holds</a>
+            </div>
+        </div>
+    </div>
+    <div class="event_tab" id="event_tab_id">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <div class="display_column">
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Live</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">New</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Past</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">News</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Vlogs</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Adds</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Research Papers</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Books & Articles</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">OTTs & Channels</a>
+            </div>
+        </div>
+    </div>
+    <div class="about_tab" id="about_tab_id">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <div class="display_column">
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Description</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Reviews</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Versions</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Admin</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Support Teams</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Contacts</a>
+            </div>
+            
+            <div class="home_tab_column">
+                <a class="tab_item" href="http://www.eventinterface.in/">Lodge Complain</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Track Complain</a>
+                <a class="tab_item" href="http://www.eventinterface.in/">Legal Supports</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="sign_up" id="sign_up_tab">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <form action="" method="post">
+            <label for="sign_User ID"></label>
+            <input id="sign_User ID" type="text" name="User ID" placeholder="User ID*" required>
+            <label for="Your First Name"></label>
+            <input id="Your First Name" type="text" name="Your First Name" placeholder="First Name*" required>
+            <label for="Your Last Name"></label>
+            <input id="Your Last Name" type="text" name="Your Last Name" placeholder="Last name*" required>
+            <label class="radio-label">
+                <input type="radio" name="gender" value="male" checked>
+                Male
+                <input type="radio" name="gender" value="female" >
+                Female
+            </label>
+            <label for="Email/Phone Number"></label>
+            <input id="Email/Phone Number" type="text" name="Email/Phone Number" placeholder="Email ID* " required>
+            <label for="sign_Pass"></label>
+            <input id="sign_Pass" type="password" name="Pass" placeholder="Password*" required>
+            <input type="button" onclick="sinin()" name="sign in" id="sin_up_button" value="Sign In" style="width: 100px; font-weight: bold;">
+        </form>
+    </div>
+    <div class="overlay" id="overlay_id" onclick="closetab()"></div>
+    <div class="log_in" id="log_in_tab">
+        <span class="close-button" onclick="closetab()">&times;</span>
+        <form action="" method="post">
+            <label for="User ID"></label>
+            <input id="User ID" type="text" name="User ID" placeholder="User ID*" required>
+            <label for="Pass"></label>
+            <input id="Pass" type="password" name="Pass" placeholder="Password*" required>
+            <input type="button" onclick="login()" name="Log In" id="log_in_button" value="Log In" style="width: 100px;font-weight: bold;">
+        </form>
+    </div>
+    <div id="loggedInUser" style="display: none;">
+        <p>Hello, <span id="usernameDisplay"></span>!</p>
+        <button type="button" onclick="logout()">Logout</button>
+    </div>
+
+    <div style="background-color: black;"><img src="logo_w.png" alt="Image description"></div>
+
+    <footer class="footer_tab">
+        <p class="copyright"> All rights reserved &copy; 2023 Event Interface.in </p>
+        <a href="#" class="claim_link">Report a Copyright Issue</a>
+    </footer>
+    
+
+    <script src="main.js"></script>
+</body>
+
+</html>
