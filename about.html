@@ -1,105 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Interface</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <header class="intro">
         <!-- Navigation Bar -->
         <nav class="navbar">
-           <ul class="nav-links">
-               <li><a href="http://www.eventinterface.in/">Home</a></li>
-               <li><a href="#about">About</a></li>
-               <li><a href="#events">Events</a></li>
-               <li><a href="#vlog">Vlog</a></li>
-               <li><a href="#contact">Contact</a></li>
-           </ul>
-           <div class="search-bar">
-               <form action="" method="post">                
-                   <svg 
-                       width="20" 
-                       height="20" 
-                       class="search_icon" 
-                       viewBox="0 0 12 12" 
-                       fill="none" 
-                       xmlns="http://www.w3.org/2000/svg">
-                       <title>Search Icon</title>
-                       <path d="M11.8 10.864L8.859 7.918a4.912 4.912 0 0 0-.444-6.47A4.888 4.888 0 0 0 4.928 0a4.888 4.888 0 0 0-3.485 1.449 4.942 4.942 0 0 0 0 6.979 4.888 4.888 0 0 0 3.485 1.449c1.052 0 2.105-.33 2.976-1.005l2.96 2.93a.658.658 0 0 0 .476.198.686.686 0 0 0 .477-.198.672.672 0 0 0-.016-.938zm-6.855-2.32c-.97 0-1.858-.38-2.549-1.054C1 6.09 1 3.802 2.396 2.387a3.578 3.578 0 0 1 2.549-1.054c.97 0 1.858.379 2.548 1.054s1.052 1.58 1.052 2.551c0 .971-.378 1.86-1.052 2.552a3.539 3.539 0 0 1-2.548 1.053z" fill="#777"></path>
-                   </svg>
-                   <input type="text" placeholder="Search here...">
-               </form>
-           </div>
-           <div class="account-links">
-               <a href="#signup">Sign up</a>
-               <a href="#signin">Sign in</a>
-           </div>
-        </nav>
-       <div class="brand_name">
-           <h5>Use our AI. Welcome to</h5>
-           <a class="Brand_Name" href="http://www.eventinterface.in/">Event Interface</a>            
-           <p>
-               Event Interface simplifies complex tasks by breaking them into smaller events. Using a dynamic event tree, it optimizes workflows and resolves challenges efficiently. With task quantization, we transform intricate processes into clear, actionable steps, ensuring precision and results.
-           </p>
-           <button>Register Now</button> 
-       </div> 
-        <!-- 
-            <div class="animated-background">
-                <img src="pexels-benjaminfarren-21790478.jpg" class="fade-image" alt="Background Image">
+            <div class="side-bar-icon" data-container-id="side-bar-id">
+                <svg width="24" height="24" class="search_icon" viewBox="0 0 7 7" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title>Search Icon</title>
+                    <path d="M0 1 H6 M0 3.5 H4 M0 6 H2" stroke="#777" stroke-width="0.5" fill="none" />
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            <!-- <div class="account-links">
+                <a class="dropDown" href="#signup" data-container-id="account-access-box-id">Sign up</a>
+                <a class="dropDown" href="#signin" data-container-id="account-access-box-id">Sign in</a>
             </div> -->
+        </nav>
+        <div class="account-access-box" id="account-access-box-id">
+            <div class="overlay" id="overlay-id">
+                <section id="signup-container" class="signup-container">
+                    <h1>Sign Up</h1>
+                    <form id="signup-form">
+                        <p id="error-message" class="error-message"></p>
+                        <input id="sign_User_ID" type="text" name="User_ID" placeholder="User ID*" required>
+                        <input id="Your_First_Name" type="text" name="First_Name" placeholder="First Name*" required>
+                        <input id="Your_Last_Name" type="text" name="Last_Name" placeholder="Last name*" required>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" checked> Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                        <input id="Email/Phone_Number" type="text" name="Email/Phone_Number" placeholder="Email ID* "
+                            required>
+                        <input id="sign_Pass" type="password" name="password_sin_up" placeholder="Password*" required>
+                        <input type="button" onclick="sin_up()" name="sign in" id="sin_up_button" value="Sign In"
+                            style="font-weight: bold;">
+                    </form>
+                </section>
+                <section id="signin-container" class="signin-container">
+                    <h1>Sign In</h1>
+                    <form id="signin-form">
+                        <p id="error-message" class="error-message"></p>
+                        <input id="login_User_ID" type="text" name="User ID" placeholder="User ID*" required>
+                        <input id="login_Pass" type="password" name="Password_log_in" placeholder="Password*" required>
+                        <input type="button" onclick="log_in()" name="Log In" id="log_in_button" value="Log In"
+                            style="font-weight: bold;">
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="brand_name">
+            <h5>Use our AI. Welcome to</h5>
+            <a class="Brand_Name" href="http://www.eventinterface.in/">Event Interface</a>
+            <p>
+                Event Interface simplifies complex tasks by breaking them into smaller events. Using a dynamic event
+                tree, it optimizes workflows and resolves challenges efficiently. With task quantization, we transform
+                intricate processes into clear, actionable steps, ensuring precision and results.
+            </p>
+            <button onclick="window.location.href='ong.html'">Register Now</button>
+
+        </div>
     </header>
 
-        <!-- Header Section -->
-    <section id="about">
-        <h1>About Us</h1>
+    <main>
+        <div id="events" class="events-section">
+            <!-- Upcoming Events Section -->
+            <section id="lanched-products">
+                <h2>Lanched Products Overview</h2>
+                <div class="products" id="lanched-products-container"></div>
+            </section>
+            <section id="upcoming-products">
+                <h2>Upcoming Products Overview</h2>
+                <div class="products" id="upcoming-products-container"></div>
+            </section>
 
-        <div class="about-intro">
-            <p>Welcome to Event Interface .in, your trusted partner for cutting-edge tech solutions. We specialize in delivering innovative, scalable, and efficient technology services that empower businesses to thrive in the digital era. From software development to AI-driven applications, we transform challenges into opportunities.</p>
+            <!-- About Section -->
+            <section id="about">
+                <section id="about-highlights">
+                    <h2>About Us</h2>
+                    <p>At Event Interface, we specialize in delivering innovative and scalable technology solutions that
+                        empower businesses to thrive in a digital world. From custom software development to cloud
+                        computing, robotics, and AI applications, our expertise spans across cutting-edge technologies
+                        that drive success.</p>
+                    <ul>
+                        <li>🎯 <strong>Mission:</strong> Simplify complex challenges with smart, efficient, and
+                            future-ready tech solutions.</li>
+                        <li>🌍 <strong>Vision:</strong> To be a global leader in delivering transformative technology
+                            that empowers progress.</li>
+                        <li>💼 <strong>Team:</strong> A dedicated team of tech enthusiasts, problem-solvers, and
+                            innovators committed to excellence.</li>
+                    </ul>
+                    <a href="about.html" class="learn-more">Learn More</a>
+                </section>
+            </section>
         </div>
-        
-        <div class="about-mission">
-            <h2>Our Mission</h2>
-            <p>Our mission is to provide reliable, intelligent, and tailored technology solutions that simplify complex processes and accelerate growth. We aim to be the driving force behind your success in an ever-evolving digital landscape.</p>
-        </div>
-        
-        <div class="about-vision">
-            <h2>Our Vision</h2>
-            <p>We envision a future where technology seamlessly integrates into every aspect of life and business, enabling innovation, efficiency, and growth. Our goal is to lead the way in crafting solutions that redefine possibilities and drive global progress.</p>
-        </div>
-        
-        <div class="about-values">
-            <h2>Our Values</h2>
-            <ul>
-                <li><strong>Innovation:</strong> Continuously exploring and implementing groundbreaking technologies to deliver exceptional results.</li>
-                <li><strong>Integrity:</strong> Building trust through transparency, accountability, and ethical practices.</li>
-                <li><strong>Customer-Centricity:</strong> Prioritizing your goals and delivering solutions tailored to your needs.</li>
-            </ul>
-        </div>
-        
-        <div class="about-team">
-            <h2>Meet Our Team</h2>
-            <p>Our team of tech experts, creative thinkers, and industry leaders is passionate about innovation and excellence. With a commitment to collaboration and continuous improvement, we work tirelessly to ensure our solutions exceed your expectations.</p>
-        </div>        
 
-        <div class="about-contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or need assistance? Reach out to us at <a href="mailto:chiradeepbanerjee96@gmail.com">chiradeepbanerjee96@gmail.com</a> or call us<br>at (+91) 9836163618. We’re here to help make your event a success!</p>
-        </div>
-    </section>
+
+    </main>
+    <!-- Footer -->
     <footer>
-        <footer id="site-footer">
+        <div id="site-footer">
             <div class="footer-container">
-                
                 <!-- Company Info and Logo -->
                 <div class="footer-about">
                     <h3>Event Interface .in</h3>
-                    <p>At Event Interface .in, we simplify event planning to help you create unforgettable experiences. From planning to execution, we are your trusted partner in event management.</p>
+                    <p>At Event Interface .in, we specialize in providing innovative, efficient, and scalable solutions
+                        tailored to your business needs. Our comprehensive product offerings ensure that every aspect of
+                        your digital journey is covered, from robust software development to advanced AI applications.
+                    </p>
                     <p>&copy; 2024 Event Interface .in. All rights reserved.</p>
                 </div>
-                
                 <!-- Quick Links -->
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -112,7 +136,7 @@
                         <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
-        
+
                 <!-- Contact Information -->
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
@@ -120,18 +144,39 @@
                     <p>Phone: <a href="tel:+919836163618">(+91) 9836163618</a></p>
                     <p>Address: Sonarpur, Kolkata, Pin- 700150, India</p>
                 </div>
-        
+
                 <!-- Social Media Links -->
                 <div class="footer-social">
                     <h4>Follow Us</h4>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="icons/facebook.svg" alt="Facebook"></a>
-                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter.svg" alt="Twitter"></a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram.svg" alt="Instagram"></a>
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="icons/facebook.svg"
+                            alt="Facebook"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter.svg"
+                            alt="Twitter"></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+                            src="icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg"
+                            alt="LinkedIn"></a>
                 </div>
             </div>
-        </footer>       
+        </div>
         <p>&copy; 2024 Event Interface | <a href="#admin-login">Admin Login</a></p>
     </footer>
+
+
+    <!-- Chatbot Section -->
+    <div id="chatbot">
+        <button id="chatbot-toggle">Chat with us</button>
+        <div id="chatbox" class="chatbox">
+            <div class="chat-content" id="chat-content"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
+
+    <script type="module" src="app.js" defer></script>
+
+
 </body>
+
 </html>
