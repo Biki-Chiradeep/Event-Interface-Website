@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flow-chart-style.css">
+    <link rel="stylesheet" href="anime-style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <h1><span>Event</span> Interface</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/courses.html">Courses</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            <div class="account-links">
+                <a class="dropDown" data-container-id="signup-container">Sign up</a>
+                <a class="dropDown" data-container-id="login-container">Log in</a>
+            </div>
+        </nav>
+        <div class="account-access-box" id="account-access-box-id">
+            <div class="overlay" id="overlay-id">
+                <section id="signup-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Sign Up</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <form id="signup-form">
+                        <p id="error-message" class="error-message"></p>
+                        <input id="sign_User_ID" type="text" name="User_ID" placeholder="User ID*" required>
+                        <input id="Your_First_Name" type="text" name="First_Name" placeholder="First Name*" required>
+                        <input id="Your_Last_Name" type="text" name="Last_Name" placeholder="Last name*" required>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" checked> Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                        <input id="Email/Phone_Number" type="text" name="Email/Phone_Number" placeholder="Email ID* "
+                            required>
+                        <input id="sign_Pass" type="password" name="password_sin_up" placeholder="Password*" required>
+                        <input type="button" onclick="sin_up()" name="sign in" id="sin_up_button" value="Sign In"
+                            style="font-weight: bold;">
+                    </form>
+                </section>
+                <section id="login-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Log in</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <form>
+                        <p id="error-message" class="error-message"></p>
+                        <input id="login_User_ID" type="text" name="User ID" placeholder="User ID*" required>
+                        <input id="login_Pass" type="password" name="Password_log_in" placeholder="Password*" required>
+                        <input type="button" onclick="log_in()" name="Log In" id="log_in_button" value="Log In"
+                            style="font-weight: bold;">
+                    </form>
+                </section>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="column">
+                <div class="poster" style="background-color: bisque; padding: 1em; border-radius: 20px; margin: 1em;">
+                    <span class='poster-item'>Welcome to </span>
+                    <span class='poster-item' style="color: rgb(42, 173, 224);">Artificial Intelligence (AI) </span>
+                    <span class='poster-item'>Course!</span>
+                    <div id="prime-entry" class="poster-item">
+                        <button onclick="playAudio()"> Click Here to Start</button>
+                    </div>
+                </div>
+                <div class="instruction"
+                    style="background-color: rgb(42, 173, 224); margin: 1em; padding: 1em 2em; border-radius: 20px;">
+                    <h2 style="text-decoration: underline;">Instructions:<span class="warning"
+                            style="color: red; background: #2c2c2c; padding: .2em .4em; border-radius: 10px; margin-left: .4em;">
+                            Warning</span>
+                    </h2>
+                    <ul>
+                        <li> To <span style="color: rgb(107, 1, 1); font-weight: 700; font-size: larger;">Start:</span>
+                            <strong>Play</strong> the audio in
+                            the <strong>Overview</strong> node to begin the course.
+                        </li>
+                        <li>
+                            To <span style="color: rgb(107, 1, 1); font-weight: 700; font-size: larger;">Stop: </span>
+                            <strong> Pause
+                            </strong> the <strong>audio in the respective node</strong> to <strong>Stop</strong> the
+                            course.
+                            Course <strong>will stop after</strong> slide animation finishes.
+                        </li>
+                        <li>
+                            To <span style="color: rgb(107, 1, 1); font-weight: 700; font-size: larger;">Continue:
+                            </span>
+                            <strong> Play
+                            </strong> the <strong>audio in the respective node again</strong> to <strong>resume</strong>
+                            the
+                            course.
+                        </li>
+                        <!-- <li>Use the <strong>Index</strong> tab to navigate through the course.</li>
+                        <li>Use the <strong>Chat</strong> tab to ask questions and get help.</li>
+                        <li>Use the <strong>Animation</strong> tab to visualize concepts.</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div id="flowchart-container" class="side-bar">
+                    <div id="indexTab">
+                        <div class="node" id="overview_id" data-next='Topics_id'>
+                            1.&emsp;Overview
+                            <audio id="myAudio" class="audio-element" controls playsinline>
+                                <source src="IntroVoice.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <!-- <div id="id8ugbq3q34-image-container-2" class="node child" data-parent="Topics_id">
+                            <div class="image-container" id="id8ugbq3q34-image-container"
+                                style="width: 273.2px; height: 128.4px;">
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: 0px 0px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -68.3px 0px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -136.6px 0px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -204.9px 0px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: 0px -32.1px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -68.3px -32.1px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -136.6px -32.1px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -204.9px -32.1px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: 0px -64.2px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -68.3px -64.2px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -136.6px -64.2px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -204.9px -64.2px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: 0px -96.3px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -68.3px -96.3px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -136.6px -96.3px;">
+                                </div>
+                                <div class="id8ugbq3q34-image-piece image-piece visible"
+                                    style="background-image: url(&quot;http://127.0.0.1:5501/icon/01.png&quot;); background-size: 273.2px 128.4px; background-position: -204.9px -96.3px;">
+
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <svg id="svg-container" style="position: absolute; top: 0; left: 0; pointer-events: none;">
+                    </svg>
+                </div>
+            </div>
+            <div class="column">
+                <h2 style="margin-top: 1em;">Index</h2>
+
+            </div>
+
+            <div class="column">
+                <div class="products">
+                    <div class='promptcontainer3'>
+                        <div class="prompt_title">
+                        </div>
+                        <p class='prompttext' id="textToSpeak">
+                            <span style="font-size: 22px;"> Hello and welcome to the <strong> Free Overview
+                                </strong>
+                                of our <strong>Complete Artificial Intelligence
+                                    (AI)</strong>
+                                Course!</span><br><br>
+                            Whether you're a beginner eager to explore the
+                            world of Artificial Intelligence (AI), or an experienced professional looking to
+                            sharpen your skills, this free course is designed to provide you with a foundational
+                            understanding of these cutting-edge technologies and also provide valuable insights
+                            into real-world applications and coding techniques. AI stands out as the most
+                            advanced and comprehensive technology in the modern era. In fact, AI encompasses
+                            Machine Learning (ML), Data Analytics, and even Neural Networks & Deep Learning,
+                            making it the ultimate integration of these fields.
+                        </p>
+                        <div class="prompt_ending">
+                            <audio id="myAudio2" class="audio-element" controls playsinline>
+                                <source src="IntroVoice.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="input-column" class="column">
+                <div class="prompt-input">
+                    <form id="myForm">
+                        <textarea id="queryInput" tabindex="0" rows="1" placeholder="Type here to send queries..."
+                            spellcheck="false"></textarea>
+                        <button type="button" id="submitButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 38 38"
+                                fill="#383636" stroke="#383636" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path class="cls-1"
+                                    d="M4 2 L33 16 A2 2 0 0 1 33 19.8  L4 34 A2 2 0 0 1 2 34 L2 22 L6 18 L2 12 L2 4 A2 2 0 0 1 4 2 Z " />
+
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div id="chatend">
+                    <p>Generative AI can make mistakes. Check important info. </p>
+                </div>
+            </div>
+            <div class="column">
+                <div id="anime" class>
+
+                    <!-- <div class="image-container" id="image-container"></div> -->
+                    <div class="image-container" id="hand-container"></div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div id="site-footer">
+            <div class="footer-container">
+                <!-- Company Info and Logo -->
+                <div class="footer-about">
+                    <h3>Event Interface .in</h3>
+                    <p>At Event Interface .in, we specialize in providing innovative, efficient, and scalable solutions
+                        tailored to your business needs. Our comprehensive product offerings ensure that every aspect of
+                        your digital journey is covered, from robust software development to advanced AI applications.
+                    </p>
+                    <p>&copy; 2024 Event Interface .in. All rights reserved.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/courses.html">Courses</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:support@eventinterface.in">chiradeepbanerjee96@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919836163618">(+91) 9836163618</a></p>
+                    <p>Address: Sonarpur, Kolkata, Pin- 700150, India</p>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="icons/facebook.svg"
+                            alt="Facebook"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter.svg"
+                            alt="Twitter"></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+                            src="icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg"
+                            alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Event Interface | <a href="#admin-login">Admin Login</a></p>
+    </footer>
+
+    <script type="module" src="flow-chart-java.mjs"></script>
+    <script type="module" src="common.js" defer></script>
+    <script type="module" src="forcourses.js" defer></script>
+    <script type="module" src="forcourses-anime.mjs" defer></script>
+</body>
+
+</html>

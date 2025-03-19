@@ -9,30 +9,35 @@
 </head>
 
 <body>
-    <header class="intro">
+    <header>
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <div class="side-bar-icon" data-container-id="side-bar-id">
-                <svg width="24" height="24" class="search_icon" viewBox="0 0 7 7" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <title>Search Icon</title>
-                    <path d="M0 1 H6 M0 3.5 H4 M0 6 H2" stroke="#777" stroke-width="0.5" fill="none" />
-                </svg>
+            <div class="logo">
+                <h1><span>Event</span> Interface</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
+                <li><a href="/courses.html">Courses</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>
             </ul>
-            <!-- <div class="account-links">
-                <a class="dropDown" href="#signup" data-container-id="account-access-box-id">Sign up</a>
-                <a class="dropDown" href="#signin" data-container-id="account-access-box-id">Sign in</a>
-            </div> -->
+            <div class="account-links">
+                <a class="dropDown" data-container-id="signup-container">Sign up</a>
+                <a class="dropDown" data-container-id="login-container">Log in</a>
+            </div>
         </nav>
         <div class="account-access-box" id="account-access-box-id">
             <div class="overlay" id="overlay-id">
-                <section id="signup-container" class="signup-container">
-                    <h1>Sign Up</h1>
+                <section id="signup-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Sign Up</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
                     <form id="signup-form">
                         <p id="error-message" class="error-message"></p>
                         <input id="sign_User_ID" type="text" name="User_ID" placeholder="User ID*" required>
@@ -51,9 +56,17 @@
                             style="font-weight: bold;">
                     </form>
                 </section>
-                <section id="signin-container" class="signin-container">
-                    <h1>Sign In</h1>
-                    <form id="signin-form">
+                <section id="login-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Log in</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <form>
                         <p id="error-message" class="error-message"></p>
                         <input id="login_User_ID" type="text" name="User ID" placeholder="User ID*" required>
                         <input id="login_Pass" type="password" name="Password_log_in" placeholder="Password*" required>
@@ -63,92 +76,229 @@
                 </section>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="introBox">
-            <span style="font-size: 18px;"><strong>Welcome to</strong></span>
-            <span style="font-size: 24px;"><strong><span style="color: rgb(20, 88, 116);">
-                        Artificial
-                        Intelligence
-                        (AI)
-                    </span>Course!</strong></span>
-            <div id="myModal" class="modal">
-                <button onclick="playAudio()"> <span style="font-size: 22px;"><strong>Click Here to Start</strong>
-                    </span></button>
+        <div class="brand_name" id="particles-js">
+            <div class="brand-text">
+                <h3>Become a Specialist </h3>
+                <h1 style="color:rgb(190, 2, 2);">
+                    Artificial Intelligence</h1>
+                <h2>-- Learn, Build, and Grow </h2>
+                <div></div>
+                <button onclick="test()"> Don't miss our
+                    <h3 style="color:rgb(190, 2, 2);">Free Course</h3>
+                </button>
             </div>
+            <!-- <button onclick="window.location.href='ong.html'">Explore Courses</button> -->
         </div>
-        <div class="container">
-            <div class="column">
-                <div class="side-bar" id="side-bar-id">
-                    <h2>Index</h2>
-                    <div id="indexTab">
-                        <div class="side_bar_item">Overview</div>
-                        <!-- <div class="home_stab" id="home_stab_id">
-                                <a class="stab_item" href=" ">Introduction</a>
-                                <a class="stab_item" href=" ">Services</a>
-                                <a class="stab_item" href=" ">Products</a>
-                                <a class="stab_item" href=" ">Contacts</a>
-                            </div> -->
+    </header>
+
+    <main>
+        <section class="start-point">
+            <h2>Your AI Learning Journey Starts Here</h2>
+            <p>Whether you're a beginner, an aspiring professional, or a business enthusiast, our AI course is for all
+                levels.</p>
+        </section>
+        <section class="start-point">
+            <div class="point-container">
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/Coding.jpg" alt="AI Chip Icon" class="point-img">
                     </div>
+                    <h3>Coding</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/www.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Networking</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/server.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Server</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/laptop-user.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Professional</h3>
                 </div>
             </div>
-            <div class="column" id="prompt-body">
-                <!-- Main Body -->
-                <div class="Main_Body">
-                    <div class="products">
-                        <div class='promptcontainer'>
-                            <div class="prompt_title">
-                            </div>
-                            <p class='prompttext' id="textToSpeak">
-                                <span style="font-size: 22px;"> Hello and welcome to the <strong> Free Overview
-                                    </strong>
-                                    of our <strong>Complete Artificial Intelligence
-                                        (AI)</strong>
-                                    Course!</span><br><br>
-                                Whether you're a beginner eager to explore the
-                                world of Artificial Intelligence (AI), or an experienced professional looking to
-                                sharpen your skills, this free course is designed to provide you with a foundational
-                                understanding of these cutting-edge technologies and also provide valuable insights
-                                into real-world applications and coding techniques. AI stands out as the most
-                                advanced and comprehensive technology in the modern era. In fact, AI encompasses
-                                Machine Learning (ML), Data Analytics, and even Neural Networks & Deep Learning,
-                                making it the ultimate integration of these fields.
-                            </p>
-                            <div class="prompt_ending">
-                                <audio id="myAudio" controls playsinline>
-                                    <source src="IntroVoice.mp3" type="audio/mpeg">
-                                </audio>
-                            </div>
+        </section>
+
+        <div class="events-section">
+            <section>
+                <div class="sep-con">
+                    <div id="course-Box-Image" class="sep-con-column">
+                    </div>
+                    <div class="sep-con-column" style=" display: block; background-color: rgba(82, 82, 82, 0.307); ">
+                        <h2 style="text-decoration: underline; padding: 0px; ">
+                            Artificial
+                            Intelligence (AI)
+                        </h2>
+                        <h2 style=" margin-bottom: 0.2em; padding: 0px;">
+                            - Free Course
+                        </h2>
+
+                        <div class="entryCard">
+                            <ul class="nav-links" style="display: block;">
+                                <h6 style="margin-bottom: 0.5em; color: rgba(2, 62, 62, 0.899);">Duration: 15 minute
+                                </h6>
+                                <p style="text-align: left; margin-bottom: 0.5em;">
+                                    &emsp;&emsp;Full AI Learning <span style="font-weight: 700;">Guide</span> | Getting
+                                    Started Software Codding |
+                                    <span style="font-weight: 700;">Difference</span> Bitween <span
+                                        style="font-weight: 700;">AI</span> & <span style="font-weight: 700;">Normal
+                                        Software</span> | Core Concepts <span style="font-weight: 700;">Data Storage,
+                                        Computing, CPU, GPU</span> and <span style="font-weight: 700;">Server</span>. |
+                                    Essentials of <span style="font-weight: 700;">Online Deployment</span>.
+                                </p>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;Dynamic Flow Chart</div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;White Board Animation</div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;Audio Lecture</div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;Dynamic Q & A</div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;PDF Download</div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;Road-Map to Advance </div>
+                                </li>
+                                <li>
+                                    <div class="entryCardTopics">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12l5 5L20 7" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="entryCardDesc">&emsp;Access Social Media Groups </div>
+                                </li>
+
+                            </ul>
+
                         </div>
 
-                    </div>
+                        <button onclick="test()"
+                            style=" background: transparent; width: 100%; display: flex; justify-content: center;">
+                            <h1
+                                style="display:flex; justify-content: center; background-color: rgba(25, 25, 25, 0.639); padding: 15px 25px; border-radius: 20px; min-width: 100%; color: rgb(231, 231, 231);">
+                                Click Here to Start</h1>
+                        </button>
 
-                    <div class="prompt-input">
-                        <form id="myForm">
-                            <textarea id="queryInput" tabindex="0" rows="1" placeholder="Type here to send queries..."
-                                spellcheck="false"></textarea>
-                            <button type="button" id="submitButton">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 38 38"
-                                    fill="#383636" stroke="#383636" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path class="cls-1"
-                                        d="M4 2 L33 16 A2 2 0 0 1 33 19.8  L4 34 A2 2 0 0 1 2 34 L2 22 L6 18 L2 12 L2 4 A2 2 0 0 1 4 2 Z " />
-
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                    <div id="chatend">
-                        <p>Generative AI can make mistakes. Check important info. </p>
                     </div>
                 </div>
+            </section>
+        </div>
+        <section class="start-point">
+            <div class="point-container">
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/female-coding.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Development</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/time-management.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Management</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/profit.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Marketing</h3>
+                </div>
+                <div class="point-cage">
+                    <div class="point-card">
+                        <img src="icon/recycle.png" alt="AI Chip Icon" class="point-img">
+                    </div>
+                    <h3>Sustainability</h3>
+                </div>
+            </div>
+        </section>
+        <section class="sep-con">
+            <div id="boxImage" class="sep-con-column-2"></div>
+            <div id="about-highlights" class="sep-con-column-2">
+                <h2>About Us</h2>
+                <p>&emsp;&emsp;At Event Interface, we are committed to empowering learners with the knowledge and
+                    skills needed
+                    to excel in the evolving world of Artificial Intelligence. Our platform offers structured AI
+                    courses, hands-on projects, and business-ready tools to help individuals and enterprises
+                    navigate the AI-driven future with confidence.</p>
+                <ul>
+                    <li>🎯 <strong>Mission:</strong>Make AI education accessible, practical, and industry-relevant
+                        for all.</li>
+                    <li>🌍 <strong>Vision:</strong> To be a global hub for AI learning, bridging the gap between
+                        knowledge and real-world applications.</li>
+                    <li>💡 <strong>Approach:</strong> A structured learning path covering fundamentals, advanced AI
+                        techniques, and business applications to ensure career and enterprise growth.</li>
+                    <li>💼 <strong>Team:</strong> A dedicated team of tech enthusiasts, problem-solvers, and
+                        innovators committed to excellence.</li>
+                    <li
+                        style="background-color: rgba(0, 0, 0, 0.581); border-radius: 12px; color: aliceblue;font-size: 1.1em; font-weight: 500; text-align: center;">
+                        <a href="about.html" class="learn-more" style="width: 100%;">Learn More</a>
+                    </li>
+                </ul>
 
             </div>
-        </div>
-    </main>
+        </section>
 
+
+
+    </main>
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
         <div id="site-footer">
             <div class="footer-container">
                 <!-- Company Info and Logo -->
@@ -165,6 +315,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="/courses.html">Courses</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -197,7 +348,9 @@
         </div>
         <p>&copy; 2024 Event Interface | <a href="#admin-login">Admin Login</a></p>
     </footer>
-    <script type="module" src="app.js" defer></script>
+    <!-- <script type="module" src="main.js" defer></script> -->
+    <script type="module" src="forindex.js" defer></script>
+    <script type="module" src="common.js" defer></script>
 </body>
 
 </html>

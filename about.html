@@ -9,30 +9,35 @@
 </head>
 
 <body>
-    <header class="intro">
+    <header>
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <div class="side-bar-icon" data-container-id="side-bar-id">
-                <svg width="24" height="24" class="search_icon" viewBox="0 0 7 7" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <title>Search Icon</title>
-                    <path d="M0 1 H6 M0 3.5 H4 M0 6 H2" stroke="#777" stroke-width="0.5" fill="none" />
-                </svg>
+            <div class="logo">
+                <h1><span>Event</span> Interface</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
+                <li><a href="/courses.html">Courses</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>
             </ul>
-            <!-- <div class="account-links">
-                <a class="dropDown" href="#signup" data-container-id="account-access-box-id">Sign up</a>
-                <a class="dropDown" href="#signin" data-container-id="account-access-box-id">Sign in</a>
-            </div> -->
+            <div class="account-links">
+                <a class="dropDown" data-container-id="signup-container">Sign up</a>
+                <a class="dropDown" data-container-id="login-container">Log in</a>
+            </div>
         </nav>
         <div class="account-access-box" id="account-access-box-id">
             <div class="overlay" id="overlay-id">
-                <section id="signup-container" class="signup-container">
-                    <h1>Sign Up</h1>
+                <section id="signup-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Sign Up</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
                     <form id="signup-form">
                         <p id="error-message" class="error-message"></p>
                         <input id="sign_User_ID" type="text" name="User_ID" placeholder="User ID*" required>
@@ -51,9 +56,17 @@
                             style="font-weight: bold;">
                     </form>
                 </section>
-                <section id="signin-container" class="signin-container">
-                    <h1>Sign In</h1>
-                    <form id="signin-form">
+                <section id="login-container" class="common-forms-class">
+                    <div class="account-access-box-head">
+                        <h1>Log in</h1>
+                        <svg class="closeTick" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <form>
                         <p id="error-message" class="error-message"></p>
                         <input id="login_User_ID" type="text" name="User ID" placeholder="User ID*" required>
                         <input id="login_Pass" type="password" name="Password_log_in" placeholder="Password*" required>
@@ -63,16 +76,17 @@
                 </section>
             </div>
         </div>
-        <div class="brand_name">
-            <h5>Use our AI. Welcome to</h5>
-            <a class="Brand_Name" href="http://www.eventinterface.in/">Event Interface</a>
-            <p>
-                Event Interface simplifies complex tasks by breaking them into smaller events. Using a dynamic event
-                tree, it optimizes workflows and resolves challenges efficiently. With task quantization, we transform
-                intricate processes into clear, actionable steps, ensuring precision and results.
-            </p>
-            <button onclick="window.location.href='ong.html'">Register Now</button>
-
+        <div class="brand_name" id="particles-js">
+            <div class="brand-text">
+                <h3>Become a Specialist in</h3>
+                <h1 style="color:rgb(190, 2, 2);">Artificial Intelligence</h1>
+                <h2>-- Learn, Build, and Grow </h2>
+                <div></div>
+                <button onclick="test()"> Don't miss our
+                    <h3 style="color:rgb(190, 2, 2);">Free Course</h3>
+                </button>
+            </div>
+            <!-- <button onclick="window.location.href='ong.html'">Explore Courses</button> -->
         </div>
     </header>
 
@@ -129,6 +143,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="/courses.html">Courses</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -174,8 +189,8 @@
     </div>
 
 
-    <script type="module" src="app.js" defer></script>
-
+    <script type="module" src="forabout.js" defer></script>
+    <script type="module" src="common.js" defer></script>
 
 </body>
 

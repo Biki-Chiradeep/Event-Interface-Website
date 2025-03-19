@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    color: #151515;
+    background: #f8f8f8;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #252525;
+    padding: 0.5em 2em 0.5em 2em;
+    width: 100%;  
+    color: #f8f8f8;
+    transition: all 1s ease;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    color: #f8f8f8;
+}
+.logo h1{
+    font-size: 2.1em;
+}
+.logo h1 span{
+    color: rgb(190, 2, 2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-links  li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    padding: 0.5em 1em 0.5em 1.5em;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 0.5em 0 0.5em;
+    transition: scale 0.4s ease, color 0.4s ease;
+}
+
+.nav-links a:hover { 
+    scale: 1.2;
+    color: aliceblue;
+}
+
+
+
+.account-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+}
+.account-links a {
+    display: flex;
+    flex-wrap: wrap;
+    color: inherit;   
+    text-decoration: none;
+    transition: scale 0.9s ease;
+    padding: .5em 1em;
+    border: #aaa 1px solid;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.account-links a:hover {    
+    scale: 1.2;  
+    text-decoration: none;  
+    color: inherit;   
+}
+.poster {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center content vertically */
+    margin-left: 2em;
+    font-size: 1.7em;
+    gap: 10px; /* Add spacing between items */
+    color: #333;
+}
+
+.poster-item{
+    color: #363636;
+    font-weight: 600;
+}
+#prime-entry button{
+    font-size: 0.7em;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #d8d8d8;
+    transition:  scale 0.4s ease;
+}
+#prime-entry button:hover {
+    scale: 1.05;
+}
+
+
+.brand_name {
+    padding: 12.5em 1em 1em 8.5em;
+    height: 70vh;
+    background-image: url('icon/02.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2e2e2e;
+    transition: all 0.4s ease;
+}
+
+.brand_name h1{
+    font-size: 2.5em;
+    transition: all 0.4s ease;
+}
+
+.brand_name a {
+    position:relative;
+    left: -4px;
+    font-size: 55px;       
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.4s ease, font-size 0.4s ease;
+}
+
+.brand_name a:hover {
+    font-size: 56px;
+
+}
+
+.brand_name p {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 23px;
+    width: 70%;
+    max-width: 400px;
+    transition: font-size 0.4s ease, color 0.4s ease;
+}
+
+.brand_name button {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding: 10px; 
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 23px;
+    max-width: 230px;
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    background-color: rgb(34, 34, 34);
+    color: #d8d8d8;
+
+}
+
+.brand_name button:hover {
+    transform: scale(1.05); 
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: center; 
+
+  
+}
+
+/* Events Section */
+.events-section {
+    padding:   1.5em 2.9em 1.5em  2.9em;
+    font-size: 20px;
+    /* border: #b18f32 solid 2px; */
+}
+.events-section  section h2{
+    padding: 1em 0 .5em 0;
+}
